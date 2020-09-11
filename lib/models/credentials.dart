@@ -8,12 +8,13 @@ class credentials with ChangeNotifier{
   String username;
   String password;
 
-  Future<bool> validation(String username,String password) async{
+  Future<bool> validation(String username,String password,BuildContext context) async{
     var url ='assets/data/login.json';
    try{
      final response = await rootBundle.loadString(url);
      final extractedData = json.decode(response) as Map<String,dynamic>;
      if(extractedData['username']==username && extractedData['password']==password ){
+       Navigator.pushReplacementNamed(context, '/catalog');
        print('sucessfull');
      }
      else{

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/':(context) => login(),
-        '/catalog':(context) =>catalog()
+        '/catalog':(context) =>ListOfItems()
       },
     );
   }

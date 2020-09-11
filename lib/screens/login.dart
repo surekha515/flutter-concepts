@@ -40,8 +40,8 @@ class login extends StatelessWidget {
                       color: Colors.yellow,
                       child: Text('ENTER'),
                       onPressed: () {
-                        credentials.validation(username.text,password.text);
-                        Navigator.pushReplacementNamed(context, '/catalog');
+                        credentials.validation(username.text,password.text,context);
+
                       },
                     );
                   },
